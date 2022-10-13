@@ -1,0 +1,11 @@
+tr [:upper:] [:lower:] <article.txt> lowercase.txt
+
+tr -cd '[a-z][\n][:space:]' <lowercase.txt> plaintext.txt
+
+python
+
+import random
+s = "abcdefghijklmnopqrstuvwxyz"
+list = random.sample(s, len(s))
+''.join(list)
+tr 'abcdefghijklmnopqrstuvwxyz' 'sqklexwfdjocbhignauzvytrmp' <plaintext.txt> ciphertext.txt
